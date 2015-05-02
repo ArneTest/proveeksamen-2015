@@ -1,33 +1,45 @@
 
 /**
- * Write a description of class Teacher here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Represents a Teacher. A teacher has a position at the university.
+ * Position is typically Assistant Professor, Associate Professor etc.
+ *
+ * @author Arne Styve
+ * @version 2015-05-02
  */
-public class Teacher extends Person
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Teacher extends Person {
+
+    private String position;  // The position at the university/school
 
     /**
-     * Constructor for objects of class Teacher
-     */
-    public Teacher()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Creates an object of Teacher.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param name the name of the teacher
+     * @param address the address of the teacher
+     * @param age the age of the teacher
+     * @param position the position that the teacher holds at the university/school
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Teacher(String name, String address, int age, String position) {
+        super(name, address, age);
+        this.position = position;
     }
+
+    /**
+     * Returns the position that the teacher holds at the school.
+     * 
+     * @return the position the teacher holds at the school
+     */
+    public String getPosition() {
+        return this.position;
+    }
+    
+    /**
+     * Sets the position that the teacher holds.
+     * 
+     * @param position the position the teacher holds
+     */
+    public void setPosition( String position )
+    {
+        this.position = position;
+    }
+
 }

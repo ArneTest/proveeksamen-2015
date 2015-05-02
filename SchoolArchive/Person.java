@@ -1,33 +1,93 @@
 
 /**
- * Write a description of class Person here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The Person class is the super-class for any person to be handled
+ * by the application.
+ *
+ * @author Arne Styve
+ * @version 2015-05-02
  */
-public class Person
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class Person {
+
+    private String name;    // The name of the person
+    private String address; // The Address of the person
+    private int age;        // The age of the person
 
     /**
-     * Constructor for objects of class Person
-     */
-    public Person()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Creates an object of Person
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param name the name of the person
+     * @param address the address of the person
+     * @param age the age of the person
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Person(String name, String address, int age) {
+        this.name = name;
+        this.address = address;
+        this.age = age;
     }
+
+    /**
+     * Creates an object of Person using dummy values/empty
+     * values for the fields name, address and age.
+     */
+    public Person() {
+        this.name = "";
+        this.address = "";
+        this.age = 0;
+    }
+
+    // Accessor- and mutator methods
+    
+    /**
+     * Sets the name of the person.
+     * 
+     * @param name the name to be set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets the address of the person.
+     * 
+     * @param address the address to be set
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * Sets the age of the person.
+     * 
+     * @param age the age to be set
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    /**
+     * Returns the name of the person.
+     * 
+     * @return the name of the person.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Returns the address of the person.
+     * @return the address of the person
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Returns the age of the person
+     * 
+     * @return the age of the person
+     */
+    public int getAge() {
+        return age;
+    }    
+    
 }
