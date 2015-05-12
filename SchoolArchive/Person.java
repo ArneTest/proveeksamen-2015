@@ -34,6 +34,19 @@ public class Person {
         this.address = "";
         this.age = 0;
     }
+    
+    /**
+     * Returns a string holding the details of the person.
+     * 
+     * @return a string holding all details about the person
+     */
+    public String getDetailsString()
+    {
+        String result = "Name: " + this.getName()
+                + " Address: " + this.getAddress()
+                + " Age: " + this.getAge();
+        return result;
+    }
 
     // Accessor- and mutator methods
     

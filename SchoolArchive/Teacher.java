@@ -41,5 +41,18 @@ public class Teacher extends Person {
     {
         this.position = position;
     }
+    
+   /**
+     * Returns a string holding the details of the teacher.
+     * 
+     * @return a string holding all details about the teacher
+     */
+    @Override
+    public String getDetailsString()
+    {
+        String result = super.getDetailsString()
+                + " Position: " + this.getPosition();
+        return result;
+    }
 
 }

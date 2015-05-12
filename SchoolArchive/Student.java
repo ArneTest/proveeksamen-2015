@@ -53,5 +53,19 @@ public class Student extends Person {
         }
             
     }
+    
+    /**
+     * Returns a string holding the details of the student.
+     * 
+     * @return a string holding all details about the student
+     */
+    @Override
+    public String getDetailsString()
+    {
+        String result = super.getDetailsString()
+                + " Stud No: " + this.getStudentNumber();
+        return result;
+    }
+    
 
 }
